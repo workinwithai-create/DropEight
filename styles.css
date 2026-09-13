@@ -1,0 +1,27 @@
+:root { --bg:#0e1012; --fg:#ece7dc; --muted:#9a9486; --line:#2a2b27; --accent:#c44a2a; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.45 ui-sans-serif,system-ui,sans-serif; }
+main { max-width:980px; margin:0 auto; padding:28px 18px 120px; }
+.eyebrow { letter-spacing:.18em; text-transform:uppercase; font-size:11px; color:var(--muted); }
+h1 { font-size:42px; font-weight:560; margin:.2em 0 .3em; letter-spacing:-.03em; }
+p.lead { color:var(--muted); max-width:40rem; }
+.row { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 22px; }
+.io { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:8px 0 22px; }
+.io label { font-size:12px; color:var(--muted); display:flex; flex-direction:column; gap:6px; }
+.io select, .io button { background:#171816; color:var(--fg); border:1px solid var(--line); border-radius:8px; padding:10px; }
+button.card { background:#171816; color:var(--fg); border:1px solid var(--line); border-radius:10px; padding:12px 14px; text-align:left; min-height:72px; min-width:160px; flex:1; cursor:pointer; }
+button.card.on { border-color:var(--accent); background:#1d1614; }
+button.card b { display:block; margin-bottom:4px; }
+button.card span { color:var(--muted); font-size:12px; }
+.bars { display:grid; grid-template-columns:repeat(10,1fr); gap:6px; }
+.bar { border:1px solid var(--line); border-radius:8px; padding:8px 4px; min-height:72px; background:#141513; }
+.bar.pre { border-color:#3a3328; background:#161410; }
+.bar.drop { border-color:#6a3328; background:#1a1210; }
+.bar.active { outline:1px solid var(--accent); }
+.bar .n { font-size:10px; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; }
+.bar .c { font-size:15px; margin-top:4px; }
+.dock { position:fixed; bottom:0; left:0; right:0; background:#121311ee; border-top:1px solid var(--line); padding:12px 18px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+.dock button { background:#ece7dc; color:#111; border:0; border-radius:999px; padding:12px 18px; font-weight:600; cursor:pointer; }
+.dock button.ghost, button.ghost { background:transparent; color:var(--fg); border:1px solid var(--line); border-radius:999px; padding:10px 14px; cursor:pointer; }
+pre { background:#141513; border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); overflow:auto; white-space:pre-wrap; font-size:12px; }
+.status { font-size:13px; color:var(--muted); }

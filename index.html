@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DropEight — live drop desk</title>
+  <meta name="description" content="Eight live-instrument bars of impact after the break. Kick lock, bass floor, crash door." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>DropEight</h1>
+  <p class="lead">Eight-bar drop desk. The break already stole the air. Session players write eight live bars of weight so the drop actually drops — kick lock, bass floor, crash on one. Pick input, output, and MIDI before you hit play.</p>
+  <p class="status" id="status">Seating chairs…</p>
+
+  <p class="eyebrow">Signal path</p>
+  <div class="io">
+    <label>Input
+      <select id="audioIn"><option value="">Default mic / interface</option></select>
+    </label>
+    <label>Output
+      <select id="audioOut"><option value="">Default speakers / phones</option></select>
+    </label>
+    <label>MIDI controller
+      <select id="midiIn"><option value="">No MIDI</option></select>
+    </label>
+    <button type="button" class="ghost" id="refreshIo">Refresh devices</button>
+  </div>
+  <p class="status" id="ioStatus">Grant mic + MIDI when prompted. Output pick needs Chrome/Edge.</p>
+
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Drop</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · pre 1–2 · drop 3–10</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+</main>
+<div class="dock">
+  <button id="playA">A · Loop drop</button>
+  <button id="playB">B · Pre + drop</button>
+  <button id="play8">8 · Drop only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
